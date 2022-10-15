@@ -1,0 +1,30 @@
+body{
+    align-items: center;
+    text-align: center;
+    background-color:#e7d8e9;
+    font-size: 28px;
+    font-family:'Arial, Helvetica, sans-serif';
+}
+h1{
+    font-size: 50px;
+    font-family:'Arial, Helvetica, sans-serif';
+    color:#58181f;
+}
+table{
+    border-collapse:separate;
+}
+td{
+    text-align: center;
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+}
+td.selected{
+    background-color: #c797bf;
+}
+.palavras h2{
+    font-size: 50px;
+    color:#58181f;
+    display:flex;
+
+}

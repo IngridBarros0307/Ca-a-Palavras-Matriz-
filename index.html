@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Caça-Palavras Akatsuki</title>
+</head>
+<body>
+    <script>
+        matriz = new Array;
+        matriz = [
+            ["P","","O","R","O","C","H","I","M","A","R","U","","","","","","S","",""],
+            ["A","","","","","","","","","","","","","","","","","A","",""],
+            ["I","","","","","","","","","","","","","","","","","S","",""],
+            ["N","","","","","","","","","","","","","","D","","","O","",""],
+            ["","","","K","A","K","U","Z","O","","","","","","E","","","R","",""],
+            ["","","","O","","","","","","","I","","","","I","","","I","","",""],
+            ["","","","N","","","","","Z","E","T","S","U","","D","","","","",""],
+            ["","","","A","","","","","","","A","","","","A","","","","",""],
+            ["","","","N","","","","","","","C","","","","R","","","","",""],
+            ["","","","","","","","","","","H","","","","A","","","","",""],
+            ["","H","","","","","","","","","I","","","","","","","","","T"],
+            ["K","I","S","A","M","E","","","","","","","","","N","A","G","A","T","O"],
+            ["","D","","","","","","","","","","","","","","","","","","B"],
+            ["","A","","","","","","","","","","","","","","","","","","I"],
+            ["","N","","","","","","","","","","","","","","","","","",""],
+        ];
+
+        window.onload = function(){
+            for(let node of document.querySelectorAll("td")){
+                if(node.textContent != ""){
+                    node.className = "selected";
+                }
+                else{
+                    let charcode = Math.round(65 + Math.random() * 25)
+                    node.textContent = String.fromCharCode(charcode)
+                }
+            }
+        }
+
+        document.write("<center><h1>Caça-Palavras Akatsuki</h1><table border='1'></center>");
+        for (linha = 0; linha < 15; linha++){
+            document.write("<tr>")
+            for(coluna = 0; coluna < 20; coluna++){
+                document.write("<td>" + matriz[linha][coluna] + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>")
+    </script>
+
+<div class="palavras">
+<h2>Palavras</h2>
+<div style="display:flex">
+<h3>Pain<br>Nagato<br> Konan <br>Itachi</h3>
+<div>
+<h3>Kisame<br> Deidara <br> Zetsu <br> Orochimaru</h3>
+</div>
+<div>
+<h3>Kakuzo<br> Sasori<br> Itachi  <br>Tobi</h3>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
